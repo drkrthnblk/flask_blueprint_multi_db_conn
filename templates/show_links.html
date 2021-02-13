@@ -5,7 +5,10 @@
 </head>
 <body>
     <h1>All Links</h1>
-    <a href="{{ url_for('main.show')}}">main
-    </a>
+    <ul>
+        {% for url, endpoint in links %}
+        <li><a href="{{ url }}">{{ endpoint }}</a></li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
